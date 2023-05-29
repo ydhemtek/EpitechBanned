@@ -63,17 +63,17 @@ def search_c_functions(directory, ignored_functions):
                                     print(f"[{file_path}:{line_num}] {colored_line.strip()}")
 
     if total_files == 0:
-        print("Aucun fichier .c ou .h trouvé dans le dossier spécifié.")
+        print("No .c or .h file found in specified folder.")
         return
 
     percentage = (c_func_count / total_files) * 100
-    percentage_text = f"Pourcentage des fonctions de la librairie C présentes : {percentage:.2f}% en rouge."
+    percentage_text = f"Percentage of C library functions present : {percentage:.2f}%."
     print(colored(percentage_text, "red"))
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Veuillez spécifier le chemin du dossier à analyser.")
-        print("Exemple d'utilisation : python script.py /chemin/vers/le/dossier")
+        print("Please specify the path of the folder to scan.")
+        print("Example usage: python3 script.py /path/to/the/folder")
         sys.exit(1)
 
     directory_path = sys.argv[1]
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     print(colored(ascii_text, "blue"))
 
     if not os.path.exists(directory_path):
-        print("Le chemin spécifié n'existe pas.")
+        print("The specified path does not exist.")
         sys.exit(1)
 
     ignored_functions_file = "ignored_functions.txt"
