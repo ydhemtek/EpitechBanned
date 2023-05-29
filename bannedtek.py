@@ -73,7 +73,7 @@ def search_c_functions(directory, ignored_functions):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Please specify the path of the folder to scan.")
-        print("Example usage: python3 script.py /path/to/the/folder")
+        print("Example usage: python3 bannedtek.py /path/to/the/folder")
         sys.exit(1)
 
     directory_path = sys.argv[1]
