@@ -1,11 +1,10 @@
 from setuptools import setup
 
 setup(
-    name='votre_script',
+    name='bannedtek',
     version='1.0',
-    description='Description de votre script',
-    author='Votre nom',
-    author_email='votre@email.com',
+    description='detect banned function',
+    author='ydhemtek',
     packages=[''],
     install_requires=[
         'termcolor',
